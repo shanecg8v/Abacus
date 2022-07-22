@@ -17,6 +17,16 @@ namespace Abacus
             return preNum - currNum;
         }
 
+        static private double Mult(double currNum, double preNum)
+        {
+            return preNum * currNum;
+        }
+
+        static private double Division(double currNum, double preNum)
+        {
+            return preNum / currNum;
+        }
+
         static public double Calc(double currNum, double preNum, OperatorEnum opEnum)
         {
             switch (opEnum)
@@ -25,6 +35,10 @@ namespace Abacus
                     return Add(currNum, preNum);
                 case OperatorEnum.b:
                     return Cut(currNum, preNum);
+                case OperatorEnum.c:
+                    return Mult(currNum, preNum);
+                case OperatorEnum.d:
+                    return Division(currNum, preNum);
                 default:
                     return 0;
             }

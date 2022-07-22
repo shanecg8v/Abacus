@@ -47,6 +47,7 @@ namespace Abacus
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -143,7 +144,7 @@ namespace Abacus
             // 
             this.button10.Location = new System.Drawing.Point(50, 388);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(270, 49);
+            this.button10.Size = new System.Drawing.Size(170, 49);
             this.button10.TabIndex = 9;
             this.button10.Text = "0";
             this.button10.UseVisualStyleBackColor = true;
@@ -157,7 +158,7 @@ namespace Abacus
             this.button11.TabIndex = 12;
             this.button11.Text = "+";
             this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.Operator_Click);
+            this.button11.Click += new System.EventHandler(this.OperatorMath_Click);
             // 
             // button12
             // 
@@ -167,7 +168,7 @@ namespace Abacus
             this.button12.TabIndex = 11;
             this.button12.Text = "-";
             this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.Operator_Click);
+            this.button12.Click += new System.EventHandler(this.OperatorMath_Click);
             // 
             // button13
             // 
@@ -185,7 +186,7 @@ namespace Abacus
             this.textBox1.Location = new System.Drawing.Point(12, 12);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(776, 51);
+            this.textBox1.Size = new System.Drawing.Size(444, 51);
             this.textBox1.TabIndex = 13;
             this.textBox1.Text = "0";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -198,7 +199,7 @@ namespace Abacus
             this.button14.TabIndex = 14;
             this.button14.Text = "*";
             this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.Operator_Click);
+            this.button14.Click += new System.EventHandler(this.OperatorMath_Click);
             // 
             // button15
             // 
@@ -208,7 +209,7 @@ namespace Abacus
             this.button15.TabIndex = 15;
             this.button15.Text = "/";
             this.button15.UseVisualStyleBackColor = true;
-            this.button15.Click += new System.EventHandler(this.Operator_Click);
+            this.button15.Click += new System.EventHandler(this.OperatorMath_Click);
             // 
             // button16
             // 
@@ -230,11 +231,22 @@ namespace Abacus
             this.button17.UseVisualStyleBackColor = true;
             this.button17.Click += new System.EventHandler(this.Del_Click);
             // 
+            // button18
+            // 
+            this.button18.Location = new System.Drawing.Point(250, 388);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(70, 49);
+            this.button18.TabIndex = 18;
+            this.button18.Text = ".";
+            this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.Number_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(469, 450);
+            this.Controls.Add(this.button18);
             this.Controls.Add(this.button17);
             this.Controls.Add(this.button16);
             this.Controls.Add(this.button15);
@@ -280,6 +292,7 @@ namespace Abacus
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button button18;
     }
 }
 

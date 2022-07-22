@@ -33,9 +33,17 @@ namespace Abacus
             _isOperator = true;
         }
 
-        private void Operator_Click(object sender,EventArgs e)
+        private void OperatorMath_Click(object sender,EventArgs e)
         {
             Button clickedButton = (Button)sender;
+            if (_isFirstClick)
+            {
+                _isFirstClick = false;
+            }
+            else
+            {
+                button11_Click(null, null);
+            }
 
             switch (clickedButton.Text)
             {
@@ -62,8 +70,11 @@ namespace Abacus
         private void Number_Click(object sender, EventArgs e)
         {
             Button clickedButton = (Button)sender;
-            if (_isFirstClick) _isFirstClick = false;
-            if (_isOperator) textBox1.Text = "0";
+            if (_isOperator)
+            {
+                textBox1.Text = "0";
+                _isOperator = false;
+            }
 
             if (clickedButton.Text.Equals("0") 
                 && textBox1.Text.Equals("0")) 
